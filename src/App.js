@@ -3,10 +3,10 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Complaint from "./pages/Complaint";
+import Complaint from "./pages/complaint";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom"; // Import Routes and Route for routing
-import Progress from "./pages/Progress";
+import Progress from "./pages/progress";
 
 import ComplaintForm from "./pages/ComplaintForm"; // Import ComplaintForm component
 
