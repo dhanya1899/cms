@@ -1,0 +1,46 @@
+/* Footer container styling */
+.footer {
+  padding: 20px;
+  background-color: #f8f8f8; /* Optional: Add background color */
+  text-align: center; /* Optional: Center the content */
+}
+
+/* Remove default list styles and make the list items horizontally aligned */
+.footer-links {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox to arrange items horizontally */
+  justify-content: center; /* Center align the links */
+}
+
+/* Styling for each list item */
+.footer-links li {
+  margin-right: 20px; /* Space between the links */
+}
+
+/* Remove margin for the last item */
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+/* Styling for the footer links */
+.footer-link {
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Link color */
+  font-size: 16px; /* Optional: Set the font size */
+}
+
+/* Hover effect for the links */
+.footer-link:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #0056b3; /* Darker color on hover */
+}
+
+/* Styling for the horizontal line */
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
