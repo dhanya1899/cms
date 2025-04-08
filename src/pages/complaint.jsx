@@ -135,12 +135,11 @@ function Complaint() {
               marginRight: 2,
               backgroundColor: "#2e6da4",
               textTransform: "none",
-              width: "210px",
+              width: "310px",
             }}
             onClick={handleComplaintButtonClick} // On click, navigate to ComplaintForm
           >
-            <span style={{ marginRight: "8px" }}>Complaint</span>
-            <span>Information</span>
+            Complaint Information
           </Button>
         </Box>
       </form>
