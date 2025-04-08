@@ -13,3 +13,10 @@
   background-color: transparent; /* No background change on active */
   color: inherit; /* No color change on active */
 }
+
+.textSize {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 652px;
+}

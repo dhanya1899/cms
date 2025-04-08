@@ -21,8 +21,6 @@ function Complaint() {
 
   return (
     <div>
-      <p className="textSize">Form Approved OMB No. 0938-0948</p>
-
       <h1 className="headingSize">
         <b>Complaint Type</b>
       </h1>
