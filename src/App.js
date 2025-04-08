@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Complaint from "./pages/complaint";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom"; // Import Routes and Route for routing
-import Progress from "./pages/progress";
+import Progress from "./pages/Progress";
 
 import ComplaintForm from "./pages/ComplaintForm"; // Import ComplaintForm component
 
