@@ -1,4 +1,4 @@
-import "./complaint.css";
+import React from "react";
 import {
   Radio,
   RadioGroup,
@@ -7,12 +7,22 @@ import {
   Button,
   Box,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import "./complaint.css";
 import "../App.css";
 
 function Complaint() {
+  const navigate = useNavigate(); // Create navigate function
+
+  // Handle navigation to ComplaintForm page
+  const handleComplaintButtonClick = () => {
+    navigate("/complaint-form"); // Redirects to ComplaintForm page
+  };
+
   return (
     <div>
       <p className="textSize">Form Approved OMB No. 0938-0948</p>
+
       <h1 className="headingSize">
         <b>Complaint Type</b>
       </h1>
@@ -22,7 +32,6 @@ function Complaint() {
 
       <form>
         <FormControl component="fieldset">
-          {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             name="radio-buttons-group"
@@ -33,7 +42,6 @@ function Complaint() {
               label="Transactions"
               sx={{ "& .MuiFormControlLabel-label": { fontSize: "22px" } }}
             />
-
             <p>
               Select if a covered entity is in violation of the following
               transactions: claims and encounter information, payment and
@@ -93,7 +101,6 @@ function Complaint() {
             width: "100%",
           }}
         >
-          {/* First Button - Left margin */}
           <Button
             type="submit"
             variant="contained"
@@ -106,7 +113,6 @@ function Complaint() {
             Welcome
           </Button>
 
-          {/* Second Button - Centered */}
           <Box
             sx={{ display: "flex", justifyContent: "center", width: "100%" }}
           >
@@ -122,9 +128,8 @@ function Complaint() {
             </Button>
           </Box>
 
-          {/* Third Button - Right margin */}
           <Button
-            type="submit"
+            type="button" // Change this to "button" to prevent form submission
             variant="contained"
             sx={{
               marginRight: 2,
@@ -132,6 +137,7 @@ function Complaint() {
               textTransform: "none",
               width: "210px",
             }}
+            onClick={handleComplaintButtonClick} // On click, navigate to ComplaintForm
           >
             <span style={{ marginRight: "8px" }}>Complaint</span>
             <span>Information</span>

@@ -1,8 +1,14 @@
-import logo from "./logo.svg";
+// src/App.js
+
+import React from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Complaint from "./pages/complaint";
+import Complaint from "./pages/Complaint";
 import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom"; // Import Routes and Route for routing
+import Progress from "./pages/Progress";
+
+import ComplaintForm from "./pages/ComplaintForm"; // Import ComplaintForm component
 
 function App() {
   return (
@@ -13,7 +19,15 @@ function App() {
         width="816"
       />
       <Header />
-      <Complaint />
+      <Progress />
+
+      {/* Define routes without Router */}
+      <Routes>
+        <Route path="/" element={<Complaint />} /> {/* Default Route */}
+        <Route path="/complaint-form" element={<ComplaintForm />} />{" "}
+        {/* Route to ComplaintForm */}
+      </Routes>
+
       <Footer />
     </div>
   );
