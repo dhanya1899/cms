@@ -10,6 +10,7 @@ function App() {
       <img
         src="https://asett.cms.gov/resource/1549656663000/Images/all-purpose-banner-v3.jpg"
         alt="Logo"
+        width="816"
       />
       <Header />
       <Complaint />

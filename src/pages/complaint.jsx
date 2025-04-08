@@ -3,50 +3,13 @@ import {
   Radio,
   RadioGroup,
   FormControlLabel,
-  FormLabel,
   FormControl,
-  Container,
   Button,
   Box,
 } from "@mui/material";
-import React, { useState } from "react";
 import "../App.css";
 
 function Complaint() {
-  // Define the states for the selections
-  const [transactionsSelection, setTransactionsSelection] = useState("");
-  const [codeSetsSelection, setCodeSetsSelection] = useState("");
-  const [uniqueIdentifiersSelection, setUniqueIdentifiersSelection] =
-    useState("");
-  const [operatingRulesSelection, setOperatingRulesSelection] = useState("");
-
-  // Handle change for each radio group
-  const handleTransactionsChange = (event) => {
-    setTransactionsSelection(event.target.value);
-  };
-
-  const handleCodeSetsChange = (event) => {
-    setCodeSetsSelection(event.target.value);
-  };
-
-  const handleUniqueIdentifiersChange = (event) => {
-    setUniqueIdentifiersSelection(event.target.value);
-  };
-
-  const handleOperatingRulesChange = (event) => {
-    setOperatingRulesSelection(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log({
-      transactionsSelection,
-      codeSetsSelection,
-      uniqueIdentifiersSelection,
-      operatingRulesSelection,
-    });
-  };
-
   return (
     <div>
       <p className="textSize">Form Approved OMB No. 0938-0948</p>
@@ -57,14 +20,15 @@ function Complaint() {
         <b>Make a selection below</b>
       </h2>
 
-      <form onSubmit={handleSubmit}>
+      <form>
         <FormControl component="fieldset">
+          {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
           <RadioGroup
-            value={transactionsSelection}
-            onChange={handleTransactionsChange}
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
           >
             <FormControlLabel
-              value="violation"
+              value="Transactions"
               control={<Radio />}
               label="Transactions"
               sx={{ "& .MuiFormControlLabel-label": { fontSize: "22px" } }}
@@ -79,7 +43,7 @@ function Complaint() {
             </p>
 
             <FormControlLabel
-              value="violation"
+              value="Code Sets"
               control={<Radio />}
               label="Code Sets"
               sx={{ "& .MuiFormControlLabel-label": { fontSize: "22px" } }}
@@ -95,7 +59,7 @@ function Complaint() {
             </p>
 
             <FormControlLabel
-              value="violation"
+              value="Unique Identifiers"
               control={<Radio />}
               label="Unique Identifiers"
               sx={{ "& .MuiFormControlLabel-label": { fontSize: "22px" } }}
@@ -107,7 +71,7 @@ function Complaint() {
             </p>
 
             <FormControlLabel
-              value="violation"
+              value="Operating Rules"
               control={<Radio />}
               label="Operating Rules"
               sx={{ "& .MuiFormControlLabel-label": { fontSize: "22px" } }}
@@ -166,9 +130,10 @@ function Complaint() {
               marginRight: 2,
               backgroundColor: "#2e6da4",
               textTransform: "none",
+              width: "210px",
             }}
           >
-            <span>Complaint</span>
+            <span style={{ marginRight: "8px" }}>Complaint</span>
             <span>Information</span>
           </Button>
         </Box>

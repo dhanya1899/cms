@@ -1,0 +1,15 @@
+/* Prevent color change and styling on hover, focus, and active states */
+.no-change-color:hover {
+  background-color: transparent; /* No background change on hover */
+  color: inherit; /* No color change on hover */
+}
+
+.no-change-color:focus {
+  background-color: transparent; /* No background change on focus */
+  color: inherit; /* No color change on focus */
+}
+
+.no-change-color:active {
+  background-color: transparent; /* No background change on active */
+  color: inherit; /* No color change on active */
+}

@@ -8,6 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom"; // React-router Link
 import "../App.css";
+import "./header.css";
 
 // Define the pages and their paths in an array of objects
 const pages = [
@@ -26,15 +27,6 @@ const supportItems = [
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElSupport, setAnchorElSupport] = React.useState(null); // State for support dropdown
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleOpenSupportMenu = (event) => {
     setAnchorElSupport(event.currentTarget); // Open the dropdown when Support is hovered
@@ -42,10 +34,6 @@ function Header() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   const handleCloseSupportMenu = () => {
@@ -76,7 +64,11 @@ function Header() {
                 sx={{ display: { xs: "block", md: "none" } }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <MenuItem
+                    key={page.name}
+                    onClick={handleCloseNavMenu}
+                    className="no-change-color"
+                  >
                     <Typography sx={{ textAlign: "center" }}>
                       <Link
                         to={page.path}
