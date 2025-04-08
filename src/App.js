@@ -21,11 +21,9 @@ function App() {
       <Header />
       <Progress />
 
-      {/* Define routes without Router */}
       <Routes>
-        <Route path="/" element={<Complaint />} /> {/* Default Route */}
+        <Route path="/" element={<Complaint />} />
         <Route path="/complaint-form" element={<ComplaintForm />} />{" "}
-        {/* Route to ComplaintForm */}
       </Routes>
 
       <Footer />
