@@ -12,7 +12,7 @@ import "./complaint.css";
 import "../App.css";
 
 function Complaint() {
-  const navigate = useNavigate(); // Create navigate function
+  const navigate = useNavigate();
 
   // Handle navigation to ComplaintForm page
   const handleComplaintButtonClick = () => {
